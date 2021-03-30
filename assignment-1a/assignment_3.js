@@ -1,7 +1,6 @@
 function main() {
   console.log("Uppgift 3.");
 
-  // Er lösning
   let string1 = "It's Learning";
   let string2 = "JavaScript: The Good Parts";
   let string3 = "JavaScript: The Good Parts";
@@ -19,5 +18,4 @@ function main() {
 
 main();
 
-// Notera att raden nedan behövs för den automatiska rättningen av uppgiften
 exports.main = main;

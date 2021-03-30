@@ -1,8 +1,6 @@
 function main() {
-  // Vi skriver ut vilken uppgift detta gäller först
   console.log("Uppgift 1.");
 
-  // Ersätt frågetecknet med en av de operatorer som listats ovan
   console.log(5 * 2 < 12);
   console.log(55 != 22);
   console.log(16 / 4 <= 4);
@@ -12,5 +10,4 @@ function main() {
 
 main();
 
-// Notera att raden nedan behövs för den automatiska rättningen av uppgiften
 exports.main = main;

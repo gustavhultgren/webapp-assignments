@@ -1,7 +1,6 @@
 function main() {
   console.log("Uppgift 2.");
 
-  // Er lösning
   let day = "Tisdag";
   let burger = "Hamburgare";
   let back = "I'll be back!";
@@ -13,5 +12,4 @@ function main() {
 
 main();
 
-// Notera att raden nedan behövs för den automatiska rättningen av uppgiften
 exports.main = main;

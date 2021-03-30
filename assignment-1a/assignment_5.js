@@ -3,7 +3,6 @@ function main() {
 
   let countries = ["Sweden", "Denmark", "Finland", "Norway"];
 
-  // Er lösning
   let string = countries[1].substring(0, 3);
   let sum = 0;
 
@@ -17,5 +16,4 @@ function main() {
 
 main();
 
-// Notera att raden nedan behövs för den automatiska rättningen av uppgiften
 exports.main = main;
