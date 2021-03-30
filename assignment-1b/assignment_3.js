@@ -1,14 +1,11 @@
 /*
-    `toggleNextElement` har som uppgift att visa eller dölja ett elements
-    kommande syskon. I vårt fall när vi klickar på en rubrik (h2) ska det
-    nästkommande syskonet (section) visas eller döljas.
+  'toggleNextElement' shows or hide elements that is next sibling.
 */
-
 function toggleNextElement(e) {
-  // Leta upp det nästkommande element-syskonet
+  // Find next sibling
   let nextSibling = this.nextElementSibling;
 
-  // Kontrollera om element visas eller döljs
+  // Control if the element is shown or hidden
   if (nextSibling.style.display === "none") {
     nextSibling.style.display = "block";
   } else {
@@ -16,15 +13,15 @@ function toggleNextElement(e) {
   }
 }
 
-/*
-    `start` har som uppgift att dölja allt innehåll för våra artiklar och
-    ser till att funktionen `toggleNextElement` körs när en användare
-    klickar på rubrikerna (h2)
+/* 
+  'start' initially hides the content of the articles and adds eventListener 
+  to the title.
 */
 function start() {
-  // Hämta alla rubriker (h2) och spara dom i en variabel
+  // Get all titles and save them into a variable
   var titles = document.querySelectorAll("h2");
 
+  // Loop through all titles and hide the content and add eventListener
   titles.forEach((title) => {
     let nextSibling = title.nextElementSibling;
     nextSibling.style.display = "none";
