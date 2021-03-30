@@ -1,1 +1,4 @@
 /* Valfritt - men snygga gärna till sidan genom lite CSS */
+h2 {
+  cursor: pointer;
+}

@@ -5,13 +5,15 @@
 */
 
 function toggleNextElement(e) {
-    // 1. Leta upp det nästkommande element-syskonet
+  // Leta upp det nästkommande element-syskonet
+  let nextSibling = this.nextElementSibling;
 
-    // 2. Kontrollera om element visas eller döljs
-
-    // 3.a. Om elementet är dolt - visa det
-    
-    // 3.b. Om elemenetet visas - dölj det
+  // Kontrollera om element visas eller döljs
+  if (nextSibling.style.display === "none") {
+    nextSibling.style.display = "block";
+  } else {
+    nextSibling.style.display = "none";
+  }
 }
 
 /*
@@ -20,17 +22,14 @@ function toggleNextElement(e) {
     klickar på rubrikerna (h2)
 */
 function start() {
-    // 1. Hämta alla rubriker (h2) och spara dom i en variabel
+  // Hämta alla rubriker (h2) och spara dom i en variabel
+  var titles = document.querySelectorAll("h2");
 
-    // 2. Loopa igenom alla dessa rubriker och:
-
-    // 2.a. Dölj allt innehåll (section) som ligger som det nästkommande
-    //     syskonet till rubriken
-
-    // 2.b. Lägg till en event-lyssnar för att ange att funktionen
-    //     `toggleNextElement` ska köras när en användare klickar
-    //     på en rubrik.
+  titles.forEach((title) => {
+    let nextSibling = title.nextElementSibling;
+    nextSibling.style.display = "none";
+    title.addEventListener("click", toggleNextElement);
+  });
 }
 
-// Kör våran `start` funktion
 start();
