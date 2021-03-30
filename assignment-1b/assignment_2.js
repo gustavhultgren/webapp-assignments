@@ -13,11 +13,12 @@ function handleAddButton(event) {
 
   li.appendChild(liTextNode);
   li.appendChild(deleteButton);
+
   list.appendChild(li);
 }
 
-function handleDeleteButton(event) {
-  list.removeChild(this);
+function handleDeleteButton() {
+  list.removeChild(this.parentNode);
 }
 
 addButton.addEventListener("click", handleAddButton);
