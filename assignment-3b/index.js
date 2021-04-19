@@ -2,10 +2,10 @@ let search = $("#search-movie");
 let movies = $("#movies");
 
 search.on("keyup", function () {
+  if (search.val().length === 0) {
+    movies.empty();
+  }
   if (search.val().length > 2) {
-    if (movies) {
-      movies.empty();
-    }
     $.ajax({
       type: "GET",
       url: "http://www.omdbapi.com/?apikey=91ba7423&s=" + search.val(),
